@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 21</title>
+</head>
+<body>
+    
+
+<script>
+
+
+function calcularPrestacoes(valorCompra, numeroPrestacoes) {
+    return valorCompra / numeroPrestacoes;
+}
+
+
+function main() {
+    let valorCompra = parseFloat(prompt("Digite o valor da compra: "));
+    let numeroPrestacoes = 5; // 5 prestações sem juros
+
+    let valorPrestacao = calcularPrestacoes(valorCompra, numeroPrestacoes);
+
+    alert("O valor de cada prestação é: R$ " + valorPrestacao.toFixed(2));
+}
+
+
+main();
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Aritmetica</title>
+</head>
+<body>
+
+    <script>
+
+            
+function calcularMedia(...numeros) {
+    let soma = numeros.reduce((acumulador, numero) => acumulador + numero, 0);
+    return soma / numeros.length;
+}
+
+
+function main() {
+    
+    let media1 = calcularMedia(8, 9, 7);
+    let media2 = calcularMedia(4, 5, 6);
+
+    
+    let somaDasMedias = media1 + media2;
+
+    
+    let mediaDasMedias = calcularMedia(media1, media2);
+
+    
+    alert("Média do primeiro conjunto de números: " + media1);
+    alert("Média do segundo conjunto de números: " + media2);
+    alert("Soma das médias: " + somaDasMedias);
+    alert("Média das médias: " + mediaDasMedias);
+}
+
+
+main();
+
+
+
+
+    </script>
+    
+</body>
+</html>

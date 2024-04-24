@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 22</title>
+</head>
+<body>
+
+    <script>
+
+        
+function contarNumerosEntreZeroE100() {
+    let contador = 0;
+    for (let i = 1; i <= 20; i++) {
+        let numero = parseFloat(prompt("Digite o número " + i + ":"));
+        if (numero >= 0 && numero <= 100) {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+
+function main() {
+    let quantidadeNumerosEntreZeroE100 = contarNumerosEntreZeroE100();
+    alert("A quantidade de números entre 0 e 100 é: " + quantidadeNumerosEntreZeroE100);
+}
+
+
+main();
+
+
+
+
+    </script>
+    
+</body>
+</html>

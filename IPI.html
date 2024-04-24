@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPI</title>
+</head>
+<body>
+    
+<script>
+
+
+
+function lerDadosPeca(numeroPeca) {
+    alert("Informe os dados da peça " + numeroPeca + ":");
+    let codigo = parseInt(prompt("Código da peça: "));
+    let valorUnitario = parseFloat(prompt("Valor unitário da peça: "));
+    let quantidade = parseInt(prompt("Quantidade de peças: "));
+    return { codigo, valorUnitario, quantidade };
+}
+
+
+function calcularValorTotal(ipi, peca1, peca2) {
+    let subtotal = (peca1.valorUnitario * peca1.quantidade) + (peca2.valorUnitario * peca2.quantidade);
+    let totalComIpi = subtotal * (ipi / 100 + 1);
+    return totalComIpi;
+}
+
+
+function main() {
+    let ipi = parseFloat(prompt("Porcentagem do IPI a ser acrescido no valor das peças (%): "));
+
+    let peca1 = lerDadosPeca(1);
+    let peca2 = lerDadosPeca(2);
+
+    let valorTotal = calcularValorTotal(ipi, peca1, peca2);
+
+    alert("O valor total a ser pago é: R$" + valorTotal.toFixed(2));
+}
+
+
+main();
+
+
+
+
+</script>
+
+
+</body>
+</html>

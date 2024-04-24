@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor Dolar</title>
+</head>
+<body>
+    
+<script>
+
+
+function converterDolarParaReal(valorDolar, cotacaoDolar) {
+    return valorDolar * cotacaoDolar;
+}
+
+
+function main() {
+    
+    let cotacaoDolar = parseFloat(prompt("Digite a cotação do dólar (US$): "));
+    let quantidadeDolar = parseFloat(prompt("Digite a quantidade de dólares disponíveis: "));
+
+   
+    let valorReal = converterDolarParaReal(quantidadeDolar, cotacaoDolar);
+
+    
+    alert("O valor em reais (R$) é: R$ " + valorReal.toFixed(2));
+}
+
+
+main();
+
+
+
+</script>
+
+</body>
+</html>

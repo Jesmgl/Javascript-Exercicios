@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma Usuarios</title>
+</head>
+<body>
+
+    <script>
+
+        
+function calcularSoma() {
+    let soma = 0;
+    for (let i = 1; i <= 10; i++) {
+        let numero = parseFloat(prompt("Digite o número " + i + ":"));
+        soma += numero;
+    }
+    return soma;
+}
+
+
+function main() {
+    let soma = calcularSoma();
+    alert("A soma dos 10 números é: " + soma);
+}
+
+main();
+
+
+
+    </script>
+    
+</body>
+</html>

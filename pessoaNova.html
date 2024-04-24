@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoa mais nova</title>
+</head>
+<body>
+    
+<script>
+
+function encontrarPessoaMaisNova() {
+    let pessoaMaisNova = { nome: "", idade: Infinity };
+    for (let i = 1; i <= 10; i++) {
+        let nome = prompt("Digite o nome da pessoa " + i + ":");
+        let idade = parseInt(prompt("Digite a idade de " + nome + ":"));
+        if (idade < pessoaMaisNova.idade) {
+            pessoaMaisNova.nome = nome;
+            pessoaMaisNova.idade = idade;
+        }
+    }
+    return pessoaMaisNova.nome;
+}
+
+
+function main() {
+    let nomePessoaMaisNova = encontrarPessoaMaisNova();
+    alert("O nome da pessoa mais nova é: " + nomePessoaMaisNova);
+}
+
+
+main();
+
+
+
+</script>
+
+
+</body>
+</html>

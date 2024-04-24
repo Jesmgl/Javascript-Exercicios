@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 23</title>
+</head>
+<body>
+    
+<script>
+
+
+function contarNumerosPorIntervalo() {
+    let contadorIntervalo1 = 0;
+    let contadorIntervalo2 = 0;
+    let contadorMaiorQue200 = 0;
+
+    for (let i = 1; i <= 20; i++) {
+        let numero = parseFloat(prompt("Digite o número " + i + ":"));
+
+        if (numero >= 0 && numero <= 100) {
+            contadorIntervalo1++;
+        } else if (numero >= 101 && numero <= 200) {
+            contadorIntervalo2++;
+        } else {
+            contadorMaiorQue200++;
+        }
+    }
+
+    return { intervalo1: contadorIntervalo1, intervalo2: contadorIntervalo2, maiorQue200: contadorMaiorQue200 };
+}
+
+
+function main() {
+    let resultados = contarNumerosPorIntervalo();
+
+    alert("Quantidade de números entre 0 e 100: " + resultados.intervalo1 + "\nQuantidade de números entre 101 e 200: " + resultados.intervalo2 + "\nQuantidade de números maiores que 200: " + resultados.maiorQue200);
+}
+
+
+main();
+
+
+
+</script>
+
+
+
+</body>
+</html>

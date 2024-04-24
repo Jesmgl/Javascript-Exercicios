@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros</title>
+</head>
+<body>
+
+    <script>
+
+    function imprimirDescendente(a, b, c) {
+    
+    let maior = a;
+    if (b > maior) {
+        maior = b;
+    }
+    if (c > maior) {
+        maior = c;
+    }
+
+    alert("Maior valor: " + maior);
+
+    
+    let segundoMaior;
+    if (a === maior) {
+        segundoMaior = Math.max(b, c);
+    } else if (b === maior) {
+        segundoMaior = Math.max(a, c);
+    } else {
+        segundoMaior = Math.max(a, b);
+    }
+
+    
+    alert("Segundo maior valor: " + segundoMaior);
+
+    
+    let menor;
+    if (a !== maior && a !== segundoMaior) {
+        menor = a;
+    } else if (b !== maior && b !== segundoMaior) {
+        menor = b;
+    } else {
+        menor = c;
+    }
+
+    
+    alert("Menor valor: " + menor);
+}
+
+
+    function main() {
+    
+    let a = parseFloat(prompt("Digite o valor de A: "));
+    let b = parseFloat(prompt("Digite o valor de B: "));
+    let c = parseFloat(prompt("Digite o valor de C: "));
+
+    
+    imprimirDescendente(a, b, c);
+    }
+
+
+    main();
+
+    </script>
+    
+</body>
+</html>

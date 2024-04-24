@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de calorias</title>
+</head>
+<body>
+
+    <script>
+
+
+function calcularCalorias(prato, sobremesa, bebida) {
+    
+    let caloriasPrato = [0, 350, 250, 400, 600]; 
+    let caloriasSobremesa = [0, 75, 100, 150, 200];
+    let caloriasBebida = [0, 5, 80, 50, 0];
+
+    
+    let totalCalorias = caloriasPrato[prato] + caloriasSobremesa[sobremesa] + caloriasBebida[bebida];
+
+    return totalCalorias;
+}
+
+
+function exibirResultado(totalCalorias) {
+    alert("A quantidade total de calorias da refeição é: " + totalCalorias);
+}
+
+// Função principal
+function main() {
+    // Solicitar ao usuário as escolhas de prato, sobremesa e bebida
+    let prato = parseInt(prompt("Escolha o prato: 1 - Vegetariano, 2 – Peixe, 3 – Frango, 4 – Carne"));
+    let sobremesa = parseInt(prompt("Escolha a sobremesa: 1 – Abacaxi, 2 – Sorvete diet, 3 – Mousse diet, 4 – Mousse chocolate"));
+    let bebida = parseInt(prompt("Escolha a bebida: 1 – Chá, 2 - Suco de laranja, 3 – Suco de melão, 4 – Refrigerante diet"));
+
+    // Calcular as calorias totais
+    let totalCalorias = calcularCalorias(prato, sobremesa, bebida);
+
+    
+    exibirResultado(totalCalorias);
+}
+
+
+main();
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

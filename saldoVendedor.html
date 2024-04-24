@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saldo do vendedor</title>
+</head>
+<body>
+
+    <script>
+
+        
+function calcularSalarioFinal(nome, salarioFixo, totalVendas) {
+    let comissao = totalVendas * 0.15; // 15% de comissão sobre as vendas
+    let salarioFinal = salarioFixo + comissao;
+    return salarioFinal;
+}
+
+
+function main() {
+    let nomeVendedor = prompt("Digite o nome do vendedor: ");
+    let salarioFixo = parseFloat(prompt("Digite o salário fixo do vendedor: "));
+    let totalVendas = parseFloat(prompt("Digite o total de vendas efetuadas pelo vendedor no mês: "));
+
+    let salarioFinal = calcularSalarioFinal(nomeVendedor, salarioFixo, totalVendas);
+
+    
+    alert("Nome do vendedor: " + nomeVendedor + "\nSalário fixo: R$ " + salarioFixo.toFixed(2) + "\nSalário final: R$ " + salarioFinal.toFixed(2));
+}
+
+main();
+
+
+
+    </script>
+    
+</body>
+</html>
